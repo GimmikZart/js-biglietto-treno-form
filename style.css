@@ -11,6 +11,23 @@ main {
   display: flex;
 }
 
+/* HEADER ------------------------------------ */
+
+header{
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-bottom: 2px solid black;
+}
+header h1 {
+  text-align: center;
+  color: red;
+  font-size: 60px;
+  font-weight: bold;
+
+
+}
+
 /* CALCOLATORE ---------------- */
 #calcolatore {
   width: 15%;
@@ -38,23 +55,49 @@ input, select, button {
   font-weight: bold;
 }
 
-/* BIGLIETTO --------------- */
+/* BIGLIETTO ------------------------------------- */
 
+/* generale */
 #biglietto {
   display: flex;
   width: 50%;
   margin-top: 200px;
   border: 5px solid black;
-  opacity: 0;
+  opacity:0;
+  transition:  2s all;
 }
 
+/* informazione cliente */
 #infocliente {
+  position: relative;
   width: 25%;
   padding-left: 20px;
   border-right: 2px dashed black;
   background-color: rgba(249, 177, 103, 0.55);
 }
+#infocliente h2 {
+  margin-top: 30px;
+  color: rgb(89, 89, 89);
+}
 
+#infocliente h3 {
+  margin-top: 20px;
+  color: rgb(4, 1, 121);
+}
+
+.spazioinput {
+  height: 50px;
+}
+
+#qrcode {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  right: 10px;
+  bottom: 10px;
+}
+
+/* informazione treno */
 #infotreno {
   width: 75%;
   background-image: linear-gradient(rgba(218, 59, 31, 0.48), rgba(227, 136, 15, 0.63));
@@ -75,31 +118,11 @@ input, select, button {
   padding-top: 100px;
   text-align: center;
   font-size: 40px;
-
 }
 
-
-#infocliente h2 {
-  margin-top: 30px;
-  color: rgb(89, 89, 89);
-}
-
-#infocliente h3 {
-  margin-top: 30px;
-  color: rgb(4, 1, 121);
-}
-
-.spazioinput {
-  height: 50px;
-}
 
 /* JAVASCRIPT CSS------------------------- */
 
 .escilo {
-  animation: escilo 2s linear;
-}
-
-@keyframes escilo {
-  0% {opacity: 0;}
-  100% {opacity: 100%;}
+  opacity: 1!important;
 }

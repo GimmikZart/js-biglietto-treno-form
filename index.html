@@ -6,15 +6,20 @@
     <title>Calcolatore Biglietto</title>
   </head>
   <body>
+    <header>
+      <h1>TRENITAGLIA</h1>
+    </header>
     <main>
+      <!--BOX RACCOLTA DATI ------------------------------->
       <section id="calcolatore">
+        <!-- zona input -->
         <input id="nome" type="text" name="" value="" placeholder="Nome">
 
         <input id="cognome" type="text" name="" value="" placeholder="Cognome">
 
         <input id="km" type="number" name="" value="" placeholder="Kilometri da percorrere">
 
-
+        <!-- zona selezioni -->
         <select id="eta" name="">
           <option id="minor" value="minorenne">Minorenne</option>
           <option id="maggior" value="maggiorenne">Maggiorenne</option>
@@ -26,19 +31,28 @@
           <option id="secondaclasse" value="secondaClasse">Seconda Classe</option>
         </select>
 
+        <!-- zona bottoni -->
         <button id="genera" type="" name="button"> GENERA BIGLIETTO </button>
 
         <button id="annulla" type="" name="button"> ANNULLA BIGLIETTO </button>
       </section>
 
+      <!-- BOX BIGLIETTO ------------------------------------>
       <section id="biglietto">
+        <!-- informazioni cliente -->
         <div id="infocliente">
           <h2>NOME PASSEGGERO</h2>
           <h3 id="nomecliente" class="spazioinput"></h3>
 
           <h2>FASCIA ETA'</h2>
           <h3 id="etacliente" class="spazioinput"></h3>
+
+          <img src="img/qrcode.392bf5f5-ade4-4b36-aa63-bb15d5c3817a" alt="" id="qrcode">
         </div>
+
+
+
+        <!-- informazioni viaggio -->
         <div id="infotreno">
           <table>
             <tr>

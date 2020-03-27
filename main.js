@@ -5,7 +5,7 @@
 // “Annulla” mi fa tornare allo stato iniziale con output pulito
 
 
-// STABILISCO LE VARIABILI DEL BIGLIETTO-----------
+// STABILISCO LE VARIABILI DEL BIGLIETTO----------------------------------------
 
 var costoAlKm;
 var costoBiglietto;
@@ -13,7 +13,7 @@ var costoScontato;
 var codiceTreno;
 var carrozza;
 
-// STABILISCO LE VARIABILI DELL'UTENTE------------
+// STABILISCO LE VARIABILI DELL'UTENTE------------------------------------------
 var nomeCliente = document.getElementById("nome");
 var cognomeCliente = document.getElementById("cognome");
 var etaCliente = document.getElementById("eta");
@@ -37,7 +37,7 @@ genera.addEventListener("click",
     document.getElementById("etacliente").innerHTML = eta;
 
 
-    // CALCOLO IL PREZZO DEL BIGLIETTO ----------
+    // CALCOLO IL PREZZO DEL BIGLIETTO --------------------------------------
     if (classeTreno === "primaClasse") {
       var costoAlKm = 0.42;
     } else if (classeTreno === "secondaClasse") {
@@ -48,7 +48,7 @@ genera.addEventListener("click",
     // console.log(costoBiglietto);
     document.getElementById("costobiglietto").innerHTML = costoBiglietto + " 	&euro;";
 
-    // CALCOLO IL PREZZO SCONTATO IN BASE ALL'ETA -----
+    // CALCOLO IL PREZZO SCONTATO IN BASE ALL'ETA -----------------------------
 
     if (eta === "minorenne") {
       costoScontato = costoBiglietto * 0.80;
@@ -63,17 +63,27 @@ genera.addEventListener("click",
 
     // console.log(costoScontato);
 
-    // stabilisco la carrozza -----------------------------------
+    // stabilisco la carrozza -------------------------------------------------
 
     carrozza = Math.floor(Math.random() * 12) +1;
     document.getElementById("carrozza").innerHTML = carrozza;
 
-    // stabilisco il codice treno -----------------------------------
+    // stabilisco il codice treno --------------------------------------------
 
     codiceTreno =  Math.floor(Math.random() * 3000) +1;
     document.getElementById("codicetreno").innerHTML = codiceTreno + "FR";
 
     var stampabiglietto = document.getElementById("biglietto");
     stampabiglietto.className = "escilo";
+  }
+)
+
+annulla.addEventListener("click",
+  function(){
+    document.getElementById("nome").value= "";
+    document.getElementById("cognome").value= "";
+    document.getElementById("km").value= "";
+    document.getElementById("eta").value= "minorenne";
+    document.getElementById("classeviaggio").value= "primaClasse";
   }
 )
