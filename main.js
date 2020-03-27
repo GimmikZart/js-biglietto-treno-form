@@ -10,6 +10,8 @@
 var costoAlKm;
 var costoBiglietto;
 var costoScontato;
+var codiceTreno;
+var carrozza;
 
 // STABILISCO LE VARIABILI DELL'UTENTE------------
 var nomeCliente = document.getElementById("nome");
@@ -31,6 +33,10 @@ genera.addEventListener("click",
     var kilom = kmCliente.value;
     // console.log(nome, cognome, eta, classeTreno, km);
 
+    document.getElementById("nomecliente").innerHTML = nome + " " + cognome;
+    document.getElementById("etacliente").innerHTML = eta;
+
+
     // CALCOLO IL PREZZO DEL BIGLIETTO ----------
     if (classeTreno === "primaClasse") {
       var costoAlKm = 0.42;
@@ -40,24 +46,34 @@ genera.addEventListener("click",
     // console.log(costoAlKm);
     costoBiglietto = kilom * costoAlKm;
     // console.log(costoBiglietto);
+    document.getElementById("costobiglietto").innerHTML = costoBiglietto + " 	&euro;";
 
     // CALCOLO IL PREZZO SCONTATO IN BASE ALL'ETA -----
 
     if (eta === "minorenne") {
       costoScontato = costoBiglietto * 0.80;
+      document.getElementById("offerta").innerHTML = "Sconto 20%";
     } else if (eta === "over") {
       costoScontato = costoBiglietto * 0.60;
+      document.getElementById("offerta").innerHTML = "Sconto 40%";
     } else {
       costoScontato = costoBiglietto;
+      document.getElementById("offerta").innerHTML = "Biglietto Standard";
     }
 
-    console.log(costoScontato);
+    // console.log(costoScontato);
 
+    // stabilisco la carrozza -----------------------------------
 
+    carrozza = Math.floor(Math.random() * 12) +1;
+    document.getElementById("carrozza").innerHTML = carrozza;
 
+    // stabilisco il codice treno -----------------------------------
 
+    codiceTreno =  Math.floor(Math.random() * 3000) +1;
+    document.getElementById("codicetreno").innerHTML = codiceTreno + "FR";
 
-
-
+    var stampabiglietto = document.getElementById("biglietto");
+    stampabiglietto.className = "escilo";
   }
 )
