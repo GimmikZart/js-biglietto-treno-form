@@ -46,7 +46,6 @@ input, select, button {
   margin-top: 200px;
   border: 5px solid black;
   opacity: 0;
-  transition: opacity 2s linear;
 }
 
 #infocliente {
@@ -97,5 +96,10 @@ input, select, button {
 /* JAVASCRIPT CSS------------------------- */
 
 .escilo {
-  opacity: 100%;
+  animation: escilo 2s linear;
+}
+
+@keyframes escilo {
+  0% {opacity: 0;}
+  100% {opacity: 100%;}
 }
