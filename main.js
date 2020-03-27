@@ -5,15 +5,13 @@
 // “Annulla” mi fa tornare allo stato iniziale con output pulito
 
 
-// stabilisco le variabili del biglietto
+// STABILISCO LE VARIABILI DEL BIGLIETTO-----------
 
 var costoAlKm;
 var costoBiglietto;
 var costoScontato;
 
-
-
-// stabilisco le variabili dell'utente
+// STABILISCO LE VARIABILI DELL'UTENTE------------
 var nomeCliente = document.getElementById("nome");
 var cognomeCliente = document.getElementById("cognome");
 var etaCliente = document.getElementById("eta");
@@ -23,7 +21,7 @@ var kmCliente = document.getElementById("km");
 var genera = document.getElementById("genera");
 var annulla = document.getElementById("annulla");
 
-// creo l'evento al click che mi prende i dati dagli imput
+// CREO L'EVENTO AL CLICK CHE MI PRENDE I DATI DAGLI INPUT--------------------------------------
 genera.addEventListener("click",
   function(){
     var nome = nomeCliente.value;
