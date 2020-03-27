@@ -5,3 +5,15 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
+#calcolatore {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 500px;
+  margin-top: 200px;
+}
+
+input, select, button {
+  width: 100%;
+}
