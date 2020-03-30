@@ -6,7 +6,11 @@
   font-family: sans-serif;
 }
 
-
+body {
+  background-image: url("img/unnamed.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
 main {
   display: flex;
 }
@@ -24,8 +28,11 @@ header h1 {
   color: red;
   font-size: 60px;
   font-weight: bold;
+}
 
-
+h4 {
+  text-align: center;
+  margin-top: 20px;
 }
 
 /* CALCOLATORE ---------------- */

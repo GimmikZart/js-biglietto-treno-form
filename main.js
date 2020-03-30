@@ -19,6 +19,7 @@ var cognomeCliente = document.getElementById("cognome");
 var etaCliente = document.getElementById("eta");
 var classeViaggio = document.getElementById("classeviaggio");
 var kmCliente = document.getElementById("km");
+var biglietto = document.getElementById("biglietto");
 
 var genera = document.getElementById("genera");
 var annulla = document.getElementById("annulla");
@@ -85,5 +86,6 @@ annulla.addEventListener("click",
     document.getElementById("km").value= "";
     document.getElementById("eta").value= "minorenne";
     document.getElementById("classeviaggio").value= "primaClasse";
+    biglietto.style.display= "none";
   }
 )
